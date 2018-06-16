@@ -1,5 +1,12 @@
 node_modules/
 lambdas/
+src/github.com/
+src/golang.org/
+src/google.golang.org/
+src/gopkg.in/
+bin/colly
+pkg/
+instagram_mollyrose30/
 dist/
 /npm-debug.log
 yarn-error.log

@@ -122,8 +122,8 @@ func scrape(instagramAccount string) []string {
 			if obj.Node.IsVideo {
 				continue
 			}
-			fmt.Println("found image:", obj.Node.ImageURL)
-			imageUrls = append(imageUrls, obj.Node.ImageURL)
+			fmt.Println("found image:", obj.Node.ThumbnailURL)
+			imageUrls = append(imageUrls, obj.Node.ThumbnailURL)
 		}
 
 	})

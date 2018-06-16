@@ -1,5 +1,5 @@
 [build]
-  command = "make build"
+  command = "make master"
   functions = "lambdas"
   publish = "dist"
 [build.environment]
@@ -7,4 +7,4 @@
   GO_IMPORT_PATH = "github.com/aninternetof/one-click-hugo-cms"
 
 [context.deploy-preview]
-  command = "yarn build-preview"
+  command = "make preview"

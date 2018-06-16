@@ -1,4 +1,5 @@
 node_modules/
+lambdas/
 dist/
 /npm-debug.log
 yarn-error.log

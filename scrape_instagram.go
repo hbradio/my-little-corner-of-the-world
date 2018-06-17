@@ -12,16 +12,12 @@ import (
 )
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-	// var imageUrls []string = scrape("mollyrose30")
 	 var graphQlData string = scrape("mollyrose30")
-	// var jsonBytes []byte
-	// jsonBytes, _ = json.Marshal(imageUrls)
-	// fmt.Print(string(jsonBytes))
 	fmt.Print(string(graphQlData))
 	return &events.APIGatewayProxyResponse{
 		StatusCode: 200,
 		Headers: map[string]string{"Content-Type": "application/json"},
-		Body:       graphQlData,
+		Body: graphQlData,
 	}, nil
 }
 
@@ -97,22 +93,6 @@ func scrape(instagramAccount string) string {
 
 		dat := e.ChildText("body > script:first-of-type")
 		jsonData = dat[strings.Index(dat, "{") : len(dat)-1]
-		// data := &mainPageData{}
-		// err := json.Unmarshal([]byte(jsonData), data)
-		// if err != nil {
-		// 	log.Fatal(err)
-		// }
-
-		// page := data.EntryData.ProfilePage[0]
-		// for _, obj := range page.Graphql.User.Media.Edges {
-		// 	// skip videos
-		// 	if obj.Node.IsVideo {
-		// 		continue
-		// 	}
-		// 	fmt.Println("found image:", obj.Node.ThumbnailURL)
-		// 	imageUrls = append(imageUrls, obj.Node.ThumbnailURL)
-		// }
-
 	})
 
 	c.Visit("https://instagram.com/" + instagramAccount)

@@ -6,7 +6,6 @@ import (
 	"crypto/md5"
 	"encoding/json"
 	"log"
-	"os"
 	"strings"
 
 	"github.com/gocolly/colly"
@@ -30,14 +29,6 @@ func main() {
 	// Make the handler available for Remote Procedure Call by AWS Lambda
 	lambda.Start(handler)
 }
-
-// found in https://www.instagram.com/static/bundles/en_US_Commons.js/68e7390c5938.js
-// included from profile page
-const instagramQueryId = "42323d64886122307be10013ad2dcc45"
-
-// "id": user id, "after": end cursor
-const nextPageURL string = `https://www.instagram.com/graphql/query/?query_hash=%s&variables=%s`
-const nextPagePayload string = `{"id":"%s","first":50,"after":"%s"}`
 
 var requestID string
 
@@ -78,14 +69,12 @@ func scrape(instagramAccount string) []string {
 
 	var imageUrls []string
 
-	var actualUserId string
-	outputDir := fmt.Sprintf("./instagram_%s/", instagramAccount)
-
 	c := colly.NewCollector(
 		colly.UserAgent("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"),
 	)
 
 	c.OnRequest(func(r *colly.Request) {
+		fmt.Println("OnRequest called")
 		r.Headers.Set("X-Requested-With", "XMLHttpRequest")
 		r.Headers.Set("Referrer", "https://www.instagram.com/"+instagramAccount)
 		if r.Ctx.Get("gis") != "" {
@@ -114,9 +103,7 @@ func scrape(instagramAccount string) []string {
 			log.Fatal(err)
 		}
 
-		os.MkdirAll(outputDir, os.ModePerm)
 		page := data.EntryData.ProfilePage[0]
-		actualUserId = page.Graphql.User.Id
 		for _, obj := range page.Graphql.User.Media.Edges {
 			// skip videos
 			if obj.Node.IsVideo {

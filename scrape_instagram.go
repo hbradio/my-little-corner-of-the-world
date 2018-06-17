@@ -14,10 +14,16 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
+type imageUrlsPayload struct {
+	Urls []string `json:"urls"`
+}
+
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 	var imageUrls []string = scrape("mollyrose30")
+	var payload imageUrlsPayload
+	payload.Urls = imageUrls
 	var jsonBytes []byte
-	jsonBytes, _ = json.Marshal(imageUrls)
+	jsonBytes, _ = json.Marshal(payload)
 	fmt.Print(string(jsonBytes))
 	return &events.APIGatewayProxyResponse{
 		StatusCode: 200,

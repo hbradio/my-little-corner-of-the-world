@@ -1,8 +1,10 @@
+.vscode/
 node_modules/
 lambdas/
 src/github.com/
 src/golang.org/
 src/google.golang.org/
+src/cloud.google.com/
 src/gopkg.in/
 bin/colly
 pkg/

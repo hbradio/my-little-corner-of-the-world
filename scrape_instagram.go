@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"bytes"
 	"crypto/md5"
-	"encoding/json"
-	"log"
 	"strings"
 
 	"github.com/gocolly/colly"
@@ -14,14 +12,16 @@ import (
 )
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-	var imageUrls []string = scrape("mollyrose30")
-	var jsonBytes []byte
-	jsonBytes, _ = json.Marshal(imageUrls)
-	fmt.Print(string(jsonBytes))
+	// var imageUrls []string = scrape("mollyrose30")
+	 var graphQlData string = scrape("mollyrose30")
+	// var jsonBytes []byte
+	// jsonBytes, _ = json.Marshal(imageUrls)
+	// fmt.Print(string(jsonBytes))
+	fmt.Print(string(graphQlData))
 	return &events.APIGatewayProxyResponse{
 		StatusCode: 200,
 		Headers: map[string]string{"Content-Type": "application/json"},
-		Body:       string(jsonBytes),
+		Body:       graphQlData,
 	}, nil
 }
 
@@ -65,9 +65,9 @@ type mainPageData struct {
 	} `json:"entry_data"`
 }
 
-func scrape(instagramAccount string) []string {
+func scrape(instagramAccount string) string {
 
-	var imageUrls []string
+	var jsonData string
 
 	c := colly.NewCollector(
 		colly.UserAgent("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"),
@@ -96,25 +96,25 @@ func scrape(instagramAccount string) []string {
 		d.Visit(requestIDURL)
 
 		dat := e.ChildText("body > script:first-of-type")
-		jsonData := dat[strings.Index(dat, "{") : len(dat)-1]
-		data := &mainPageData{}
-		err := json.Unmarshal([]byte(jsonData), data)
-		if err != nil {
-			log.Fatal(err)
-		}
+		jsonData = dat[strings.Index(dat, "{") : len(dat)-1]
+		// data := &mainPageData{}
+		// err := json.Unmarshal([]byte(jsonData), data)
+		// if err != nil {
+		// 	log.Fatal(err)
+		// }
 
-		page := data.EntryData.ProfilePage[0]
-		for _, obj := range page.Graphql.User.Media.Edges {
-			// skip videos
-			if obj.Node.IsVideo {
-				continue
-			}
-			fmt.Println("found image:", obj.Node.ThumbnailURL)
-			imageUrls = append(imageUrls, obj.Node.ThumbnailURL)
-		}
+		// page := data.EntryData.ProfilePage[0]
+		// for _, obj := range page.Graphql.User.Media.Edges {
+		// 	// skip videos
+		// 	if obj.Node.IsVideo {
+		// 		continue
+		// 	}
+		// 	fmt.Println("found image:", obj.Node.ThumbnailURL)
+		// 	imageUrls = append(imageUrls, obj.Node.ThumbnailURL)
+		// }
 
 	})
 
 	c.Visit("https://instagram.com/" + instagramAccount)
-	return imageUrls
+	return jsonData
 }

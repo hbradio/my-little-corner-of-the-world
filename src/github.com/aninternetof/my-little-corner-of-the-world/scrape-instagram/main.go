@@ -13,13 +13,22 @@ import (
 	"log"
 )
 
+type photoInfo struct {
+	ThumbnailUrl string `json:"thumbnail_url"`
+}
+
+
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-	var graphQlData string = scrape("mollyrose30")
-	fmt.Print(string(graphQlData))
+	photoInfos := scrape("mollyrose30")
+	jsonBytes, err := json.Marshal(photoInfos)
+	if err != nil {
+		log.Fatal(err)
+	}
+	println(string(jsonBytes))
 	return &events.APIGatewayProxyResponse{
 		StatusCode: 200,
 		Headers:    map[string]string{"Content-Type": "application/json"},
-		Body:       graphQlData,
+		Body:       string(jsonBytes),
 	}, nil
 }
 
@@ -28,12 +37,12 @@ func main() {
 	lambda.Start(handler)
 }
 
-var requestID string
-
 type pageInfo struct {
 	EndCursor string `json:"end_cursor"`
 	NextPage  bool   `json:"has_next_page"`
 }
+
+var requestID string
 
 type mainPageData struct {
 	Rhxgis    string `json:"rhx_gis"`
@@ -63,17 +72,17 @@ type mainPageData struct {
 	} `json:"entry_data"`
 }
 
-func scrape(instagramAccount string) string {
+func scrape(instagramAccount string) []photoInfo {
 
 	var jsonData string
-	var imageUrls []string
+	var photoInfos []photoInfo
 
 	c := colly.NewCollector(
 		colly.UserAgent("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"),
 	)
 
 	c.OnRequest(func(r *colly.Request) {
-		fmt.Println("OnRequest called")
+		fmt.Println("Handling request...")
 		r.Headers.Set("X-Requested-With", "XMLHttpRequest")
 		r.Headers.Set("Referrer", "https://www.instagram.com/"+instagramAccount)
 		if r.Ctx.Get("gis") != "" {
@@ -109,11 +118,12 @@ func scrape(instagramAccount string) string {
 			if obj.Node.IsVideo {
 				continue
 			}
-			fmt.Println("found image:", obj.Node.ThumbnailURL)
-			imageUrls = append(imageUrls, obj.Node.ThumbnailURL)
+			var info photoInfo
+			info.ThumbnailUrl = obj.Node.ThumbnailURL
+			photoInfos = append(photoInfos, info)
 		}
 	})
 
 	c.Visit("https://instagram.com/" + instagramAccount)
-	return jsonData
+	return photoInfos
 }

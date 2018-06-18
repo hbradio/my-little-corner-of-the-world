@@ -1,23 +1,23 @@
 package main
 
 import (
-	"fmt"
 	"bytes"
 	"crypto/md5"
+	"fmt"
 	"strings"
 
-	"github.com/gocolly/colly"
-	"github.com/aws/aws-lambda-go/events"
+	events "github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
+	"github.com/gocolly/colly"
 )
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-	 var graphQlData string = scrape("mollyrose30")
+	var graphQlData string = scrape("mollyrose30")
 	fmt.Print(string(graphQlData))
 	return &events.APIGatewayProxyResponse{
 		StatusCode: 200,
-		Headers: map[string]string{"Content-Type": "application/json"},
-		Body: graphQlData,
+		Headers:    map[string]string{"Content-Type": "application/json"},
+		Body:       graphQlData,
 	}, nil
 }
 

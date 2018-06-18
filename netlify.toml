@@ -4,6 +4,7 @@
   publish = "dist"
 [build.environment]
   YARN_VERSION = "1.3.2"
+  GO_IMPORT_PATH = "github.com/aninternetof/my-little-corner-of-the-world"
 
 [context.deploy-preview]
   command = "make preview"

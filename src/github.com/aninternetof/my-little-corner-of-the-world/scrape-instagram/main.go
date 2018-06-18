@@ -14,6 +14,8 @@ import (
 
 type photoInfo struct {
 	ThumbnailUrl string `json:"thumbnail_url"`
+	Shortcode string `json:"shortcode"`
+	Description string `json:"description"`
 }
 
 
@@ -40,7 +42,7 @@ type pageInfo struct {
 	EndCursor string `json:"end_cursor"`
 	NextPage  bool   `json:"has_next_page"`
 }
-
+// var alt = node.edge_media_to_caption.edges[0].node.text
 type mainPageData struct {
 	Rhxgis    string `json:"rhx_gis"`
 	EntryData struct {
@@ -53,13 +55,21 @@ type mainPageData struct {
 							Node struct {
 								ImageURL     string `json:"display_url"`
 								ThumbnailURL string `json:"thumbnail_src"`
+								Shortcode    string `json:"shortcode"`
+								EdgeMediaToCaption struct {
+									Edges []struct {
+										Node struct {
+											Text string `json:"text"`
+										} `json:"node"`
+									} `json:"edges"`
+								} `json:"edge_media_to_caption"`
 								IsVideo      bool   `json:"is_video"`
 								Date         int    `json:"date"`
 								Dimensions   struct {
 									Width  int `json:"width"`
 									Height int `json:"height"`
 								} `json:"dimensions"`
-							} `json::node"`
+							} `json:"node"`
 						} `json:"edges"`
 						PageInfo pageInfo `json:"page_info"`
 					} `json:"edge_owner_to_timeline_media"`
@@ -113,6 +123,8 @@ func scrape(instagramAccount string) []photoInfo {
 			}
 			var info photoInfo
 			info.ThumbnailUrl = obj.Node.ThumbnailURL
+			info.Shortcode = obj.Node.Shortcode
+			info.Description = obj.Node.EdgeMediaToCaption.Edges[0].Node.Text
 			photoInfos = append(photoInfos, info)
 		}
 	})

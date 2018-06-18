@@ -1,12 +1,11 @@
 package main
 
 import (
-	"bytes"
 	"crypto/md5"
 	"fmt"
 	"strings"
 
-	events "github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/gocolly/colly"
 	"encoding/json"
@@ -41,8 +40,6 @@ type pageInfo struct {
 	EndCursor string `json:"end_cursor"`
 	NextPage  bool   `json:"has_next_page"`
 }
-
-var requestID string
 
 type mainPageData struct {
 	Rhxgis    string `json:"rhx_gis"`
@@ -96,10 +93,6 @@ func scrape(instagramAccount string) []photoInfo {
 
 	c.OnHTML("html", func(e *colly.HTMLElement) {
 		d := c.Clone()
-		d.OnResponse(func(r *colly.Response) {
-			idStart := bytes.Index(r.Body, []byte(`:n},queryId:"`))
-			requestID = string(r.Body[idStart+13 : idStart+45])
-		})
 		requestIDURL := e.Request.AbsoluteURL(e.ChildAttr(`link[as="script"]`, "href"))
 		d.Visit(requestIDURL)
 

@@ -9,6 +9,8 @@ import (
 	events "github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/gocolly/colly"
+	"encoding/json"
+	"log"
 )
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
@@ -64,6 +66,7 @@ type mainPageData struct {
 func scrape(instagramAccount string) string {
 
 	var jsonData string
+	var imageUrls []string
 
 	c := colly.NewCollector(
 		colly.UserAgent("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"),
@@ -93,6 +96,22 @@ func scrape(instagramAccount string) string {
 
 		dat := e.ChildText("body > script:first-of-type")
 		jsonData = dat[strings.Index(dat, "{") : len(dat)-1]
+
+		data := &mainPageData{}
+		err := json.Unmarshal([]byte(jsonData), data)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		page := data.EntryData.ProfilePage[0]
+		for _, obj := range page.Graphql.User.Media.Edges {
+			// skip videos
+			if obj.Node.IsVideo {
+				continue
+			}
+			fmt.Println("found image:", obj.Node.ThumbnailURL)
+			imageUrls = append(imageUrls, obj.Node.ThumbnailURL)
+		}
 	})
 
 	c.Visit("https://instagram.com/" + instagramAccount)

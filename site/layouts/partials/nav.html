@@ -1,27 +1,21 @@
 <nav class="overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center relative">
 
-    <!-- Logo -->
-    <a href="/" class="pa3 db mr4 h-100 w6 flex-none no-underline">
-        {{ if eq .Type "post"  }}
-            <div><ul class="b grey-3"><li>My Little Corner of the World</li></ul></div>
-        {{ end }}
-    </a>
-
 	<!-- Primary Nav -->
-	<ul class="flex b grey-3">
+	<ul class="flex b grey-3" style="margin-left: auto">
 		{{ if eq .Type "post"  }}
-            <li><a href="/" class="pa3 no-underline db">Home</a></li>
+            <li><a href="/" class="pa3 no-underline db">My Little Corner of the World | Home</a></li>
+        {{ else }}
+            <li><a href="/products" class="pa3 no-underline db">Products</a></li>
+
+            <li><a href="/post/one-hundred-and-one/" class="pa3 no-underline db">100 in 1001</a></li>
+
+            <li><a href="/values" class="pa3 no-underline db">Values</a></li>
+
+            <li><a href="/post" class="pa3 no-underline db">Blog</a></li>
+
+            <li><a href="/contact" class="pa3 no-underline db">Contact</a></li>
 		{{ end }}
 
-		<li><a href="/products" class="pa3 no-underline db">Products</a></li>
-
-		<li><a href="/post/one-hundred-and-one/" class="pa3 no-underline db">100 in 1001</a></li>
-
-		<li><a href="/values" class="pa3 no-underline db">Values</a></li>
-
-		<li><a href="/post" class="pa3 no-underline db">Blog</a></li>
-
-		<li><a href="/contact" class="pa3 no-underline db">Contact</a></li>
 	</ul>
 
 </nav>

@@ -1,4 +1,9 @@
-<div id="instagram-area"></div>
+<div class="bg-off-white pv4">
+    <div class="ph3 mw8 center">
+        <div id="instagram-area" class="w-100 flex-ns mhn1-ns flex-wrap mb3">
+        </div>
+    </div>
+</div>
 
 <script>
 	function getAjax(url, success) {
@@ -15,18 +20,20 @@
 	// getAjax('http://localhost:9010/?url=https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
 	getAjax('https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
 		json = JSON.parse(data)
-		var div = document.getElementById("instagram-area");
-		for (i = 0; i < 5; i++) {
+		var targetDiv = document.getElementById("instagram-area");
+		for (i = 0; i < 6; i++) {
+		    var div = document.createElement("div")
+            div.className = "ph1-ns w-40-ns flex";
 			var a = document.createElement("a");
 			a.href = "https://www.instagram.com/p/" + json[i].shortcode + "/?taken-by=mollyrose30"
 			var img = document.createElement("img");
 			img.src = json[i].thumbnail_url;
-			var alt = json[i].description
-			img.alt = alt
-			img.title = alt
-			a.appendChild(img)
-			div.appendChild(a)
+			var alt = json[i].description;
+			img.alt = alt;
+			img.title = alt;
+			a.appendChild(img);
+            div.appendChild(a);
+			targetDiv.appendChild(div);
 		}
-		
 	});
 </script>

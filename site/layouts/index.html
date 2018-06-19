@@ -2,14 +2,23 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
-{{ partial "instagram-image-grid" }}
+<div class="bg-off-white pv4">
+    <div class="ph3 mw8 center">
+        <div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
+            <div class="ph5-ns w-70-ns flex">
+                {{ partial "blog" . }}
+            </div>
+            <div class="ph2-ns w-30-ns flex">
+                {{ partial "instagram-image-grid" }}
+            </div>
+        </div>
+    </div>
+</div>
 
 {{ partial "short-text" .Params.blurb}}
 
 {{ partial "2-up" .Params }}
 
 {{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read moarr" "buttonLink" "/values") }}
-
-{{ partial "blog" . }}
 
 {{ end }}

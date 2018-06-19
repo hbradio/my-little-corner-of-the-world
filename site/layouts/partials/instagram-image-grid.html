@@ -1,7 +1,5 @@
-<div class="bg-off-white pv4">
-    <div class="ph3 mw8 center">
-        <div id="instagram-area" class="w-100 flex-ns mhn1-ns flex-wrap mb3">
-        </div>
+<div class="ph3 mw8 center">
+    <div id="instagram-area" class="w-100 flex-ns mhn1-ns flex-wrap mb3">
     </div>
 </div>
 
@@ -19,10 +17,10 @@
 
 	// getAjax('http://localhost:9010/?url=https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
 	getAjax('https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
-		json = JSON.parse(data)
+		json = JSON.parse(data);
 		var targetDiv = document.getElementById("instagram-area");
 		for (i = 0; i < 6; i++) {
-		    var div = document.createElement("div")
+		    var div = document.createElement("div");
             div.className = "ph1-ns w-50-ns flex center";
 			var a = document.createElement("a");
 			a.href = "https://www.instagram.com/p/" + json[i].shortcode + "/?taken-by=mollyrose30"

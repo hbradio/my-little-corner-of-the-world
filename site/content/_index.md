@@ -1,7 +1,7 @@
 ---
 title: My Little Corner of the World
 subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-image: /img/home-jumbotron.jpg
+image: /img/bananas-clipping-close-up-61127.jpg
 blurb:
   heading: Hello!
   image: /img/profile.jpg

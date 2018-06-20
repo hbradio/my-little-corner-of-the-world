@@ -6,7 +6,8 @@ image: /img/about-reinvest-profits.jpg
 ---
 **_Start: 1/14/17  -  End: 10/12/19_**
 
-   ## Create
+## Create
+
 1. Start a blog
 2. Find a kiln
 3. Do something creative every week

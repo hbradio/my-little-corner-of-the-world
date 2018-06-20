@@ -9,16 +9,27 @@ image: /img/about-reinvest-profits.jpg
 ## Create
 
 1. Start a blog
+
 2. Find a kiln
+
 3. Do something creative every week
-4. Write something about millenials
+
+4. Write something about millennials
+
 5. Get another tattoo  6/26/17 & 
+
 6. Make a quilt
+
 7. Finish crocheting a blanket
+
 8. Embroider a throw pillow for the couch
+
 9. Blog about 50% of these accomplishments
+
 10. Learn a song on my ukulele
+
 11. Make someone a beautiful birthday cake  9/17/17 Baked Alaska for B's 29th birthday
+
 12. Finish this list and make a new one
 
     ## Adventure

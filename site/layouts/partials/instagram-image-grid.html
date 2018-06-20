@@ -16,8 +16,8 @@
 		return xhr;
 	}
 
-	getAjax('http://localhost:9010/?url=https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
-	// getAjax('https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
+	// getAjax('http://localhost:9010/?url=https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
+	getAjax('https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
 		json = JSON.parse(data);
 		var targetDiv = document.getElementById("instagram-area");
 		for (i = 0; i < 6; i++) {

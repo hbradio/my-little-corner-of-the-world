@@ -20,7 +20,9 @@ image: /img/about-reinvest-profits.jpg
 10. Learn a song on my ukulele
 11. Make someone a beautiful birthday cake  9/17/17 Baked Alaska for B's 29th birthday
 12. Finish this list and make a new one
+
     ## Adventure
+
 13. Take a trip to Bloomington
 14. Plan a spa getaway for me and B
 15. Take pups to dog park once a month  Metazoa's dog park, most Friday nights
@@ -55,7 +57,9 @@ image: /img/about-reinvest-profits.jpg
 43. Master the rowing machine
 44. Participate in Meatless Monday consistently
 45. Eat the recommended portion size for a whole week
+
     ## Home
+
 46. Get into a house cleaning routine
 47. Paint rooms to match new home color scheme
 48. Switch decor with seasons
@@ -70,7 +74,9 @@ image: /img/about-reinvest-profits.jpg
 57. Make it to the bottom of my pile of magazines - get rid of old ones!
 58. Come up with a new bathroom floorplan (upstairs)
 59. Make garage more usable - get rid of junk
+
     ## Culture
+
 60. Read all my book club books (11 per year) \[See progress on my bookshelf]
 61. Read 4 non-book club books per year \[See bookshelf]
 62. Finish the Brothers Karamazov
@@ -89,7 +95,9 @@ image: /img/about-reinvest-profits.jpg
 74. Go on a picnic
 75. Meet up with Best Pal's group, annually at least \[Indy May 2017, Baltimore June 2017, STL November 2017, Orlando March 2018, STL April 2018]
 76. Invest in new friendships
+
     ## Personal
+
 77. Find a new place to give to monthly
 78. Use a planner/calendar of some kind
 79. Find my old iTunes music library (hopefully) and successfully get it on Google

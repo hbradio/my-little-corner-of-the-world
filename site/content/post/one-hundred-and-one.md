@@ -1,13 +1,12 @@
 ---
 title: 101 in 1001
-date: 2015-10-05T13:39:12-04:00
+date: 2015-10-05T17:39:12.000Z
 description: 101 things to do in 1001 days.
 image: /img/about-reinvest-profits.jpg
 ---
 **_Start: 1/14/17  -  End: 10/12/19_**
 
-  ## Create
-
+   ## Create
 1. Start a blog
 2. Find a kiln
 3. Do something creative every week

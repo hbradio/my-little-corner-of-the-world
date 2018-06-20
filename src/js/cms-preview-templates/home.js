@@ -18,12 +18,11 @@ export default class PostPreview extends React.Component {
 
         <div className="bg-grey-1 pv4">
           <div className="flex-l mhn1-l ph3 center mw7">
+            <img src={entry.getIn(["data", "blurb", "image"])}/>
             <h2 className="f2 b lh-title mb2 w-40-l">{entry.getIn(["data", "blurb", "heading"])}</h2>
             <p className="w-60-l mb0">{entry.getIn(["data", "blurb", "text"])}</p>
           </div>
         </div>
-
-       <Short-text heading={entry.getIn(["data", "blurb", "heading"])} text={entry.getIn(["data", "blurb", "text"])} image={entry.getIn(["data", "blurb", "image"])}/>
 
         <div className="bg-off-white pv4">
           <div className="ph3 mw7 center">

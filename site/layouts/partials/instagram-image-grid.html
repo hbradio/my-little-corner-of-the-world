@@ -1,4 +1,5 @@
 <div class="ph3 mw8 center">
+    {{ partial "social-icon" (dict "link" "https://www.instagram.com/mollyrose30/" "svg" "icons-instagram" "text" "") }}
     <div id="instagram-area" class="w-100 flex-ns mhn1-ns flex-wrap mb3">
     </div>
 </div>
@@ -15,8 +16,8 @@
 		return xhr;
 	}
 
-	// getAjax('http://localhost:9010/?url=https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
-	getAjax('https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
+	getAjax('http://localhost:9010/?url=https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
+	// getAjax('https://my-little-corner-of-the-world.netlify.com/.netlify/functions/scrape-instagram', function (data) {
 		json = JSON.parse(data);
 		var targetDiv = document.getElementById("instagram-area");
 		for (i = 0; i < 6; i++) {

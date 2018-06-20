@@ -4,7 +4,7 @@ subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
 image: /img/botanical-cup-decoration-1122765.jpg
 blurb:
   heading: Hi!
-  image: /img/profile.jpg
+  image: /img/profile2.jpg
   text: >-
     Diam maecenas sed enim ut sem. Fermentum iaculis eu non diam phasellus
     vestibulum lorem sed. Egestas diam in arcu cursus euismod quis viverra nibh

@@ -16,7 +16,7 @@ image: /img/about-reinvest-profits.jpg
 
 4. Write something about millennials
 
-5. Get another tattoo  6/26/17 & 
+5. ~~Get another tattoo~~  [6/26/17 '&']
 
 6. Make a quilt
 
@@ -28,7 +28,7 @@ image: /img/about-reinvest-profits.jpg
 
 10. Learn a song on my ukulele
 
-11. Make someone a beautiful birthday cake  9/17/17 Baked Alaska for B's 29th birthday
+11. ~~Make someone a beautiful birthday cake~~  [9/17/17 Baked Alaska for B's 29th birthday]
 
 12. Finish this list and make a new one
 
@@ -46,9 +46,9 @@ image: /img/about-reinvest-profits.jpg
 
 18. Take a cooking class
 
-19. Visit 3 new states – not just driving through \[New York, 4/20/17] 
+19. Visit 3 new states – not just driving through [New York, 4/20/17] 
 
-20. Visit a national monument \[Washington DC, June 2017]
+20. ~~Visit a national monument~~[Washington DC, June 2017]
 
 21. Ride bikes more (with and without pups)
 
@@ -116,7 +116,7 @@ image: /img/about-reinvest-profits.jpg
 
 51. Finish knit pillow covers
 
-52. Cover couch  \[Re-invented couch, and it no longer needed a cover - so 
+52. ~~Cover couch~~[Re-invented couch, and it no longer needed a cover - so 
 that counts!]
 
 53. Make a real budget and stick to it
@@ -189,7 +189,7 @@ that counts!]
 
 84. Stop snoozing in the morning
 
-85. Donate my hair   [1/15/17 8 inches donated to Pantene Beautiful Lengths]
+85. ~~Donate my hair~~[1/15/17 8 inches donated to Pantene Beautiful Lengths]
 
 86. Re-read 4 books I love
 
@@ -199,7 +199,7 @@ that counts!]
 
 89. Frame my TU diploma and USI diploma
 
-90. Find a signature scent (perfume) and wear it consistently  \[2/14/17 Chanel Mademoiselle thanks B!]
+90. ~~Find a signature scent (perfume) and wear it consistently~~[2/14/17 Chanel Mademoiselle thanks B!]
 
 91. Find a way to organize my desk at work and keep it that way
 
@@ -214,13 +214,13 @@ don't need
 
 96. Get 5 pieces of clothing tailored
 
-97. Find a way to keep track of internet passwords  \[July 2017 Lastpass]
+97. ~~Find a way to keep track of internet passwords~~[July 2017 Lastpass]
 
 98. Get a doctor and actually talk to them about things
 
 99. Give $10 to charity for each item I do not complete
 
-100. Pay off undergrad loans  \[August 2017]
+100. ~~Pay off undergrad loans~~[August 2017]
 
 101. Do 1 productive thing after work everyday, no matter how I feel
 

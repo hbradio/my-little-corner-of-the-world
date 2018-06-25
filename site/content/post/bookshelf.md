@@ -26,6 +26,6 @@ description: What I've read and am reading.
 * _Song of Solomon_, Toni Morrison
 * _Swamplandia_, Karen Russell
 
-## Other Books:
+## Other Books
 
 * _The Brothers Karamazov_, Fyodor Dostoyevsky

@@ -35,7 +35,7 @@ _**Start: 1/14/17  -  End: 10/12/19**_
 24. Go to the Indiana State Fair
 25. Go to a homecoming event (HS or college, mine or B's)
 26. Go on a roller coaster
-27. \~\~Go out on a boat\~\~ \[June 2018 with the Byergo's!]
+27. ~~Go out on a boat~~ [June 2018 with the Byergo's!]
 28. Take the pups to the beach
 29. Take a real road trip with B and the pups
     ## Health/Food
@@ -57,7 +57,7 @@ _**Start: 1/14/17  -  End: 10/12/19**_
 45. Eat the recommended portion size for a whole week
     ## Home
 46. Get into a house cleaning routine
-47. \~\~Paint rooms to match new home color scheme\~\~ \[Entry way, living room, guestroom]
+47. ~~Paint rooms to match new home color scheme~~ \[Entry way, living room, guestroom]
 48. Switch decor with seasons
 49. Help B finish the basement
 50. Make the studio usable space
@@ -113,8 +113,8 @@ _**Start: 1/14/17  -  End: 10/12/19**_
 95. Become someone who only needs 20 products (hair, skincare, make-up) - throw away all others
 96. Get 5 pieces of clothing tailored
 97. ~~Find a way to keep track of internet passwords~~\[July 2017 Lastpass]
-98. \~\~Get a doctor and actually talk to them about things\~\~ \[Dr. Burns and Dr. Carr]
+98. ~~Get a doctor and actually talk to them about things~~ \[Dr. Burns and Dr. Carr]
 99. Give $10 to charity for each item I do not complete
 100. ~~Pay off undergrad loans~~\[August 2017]
 101. Do 1 productive thing after work everyday, no matter how I feel
-102. \~\~**_Finish MBA program\~\~ _\[Added August 2017, completed June 2018]**
+102. ~~Finish MBA program~~ \[Added August 2017, completed June 2018]**

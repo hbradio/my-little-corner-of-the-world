@@ -7,7 +7,7 @@ description: What I've read and am reading.
 
 **2017**
 
-* _Things Fall Apart_, C. Achebe
+* _Things Fall Apart_, C. Achebe 
 * _Invitation to a Beheading_, Nabakov
 * _Sweetbitter_, Stephanie Danler
 * _Rebecca_, D. DuMaurier
@@ -25,6 +25,16 @@ description: What I've read and am reading.
 * _Peace Like A River_, Leif Enger
 * _Song of Solomon_, Toni Morrison
 * _Swamplandia_, Karen Russell
+* _Song of Solomon_, Toni Morrison
+* _Tender is the Night_, F. Scott Fitzgerald
+* The Liars Club, Mary Karr
+* _The Joy Luck Club_, Amy Tan
+* _ We Have Always Lived in the Castle_, Shirley Jackson
+* _Jabercrow_, Wendell Berry
+
+**2019**
+
+* _Dead Man Walking_, Sister Helen Prejean
 
 ## Other Books
 

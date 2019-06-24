@@ -27,7 +27,7 @@ description: What I've read and am reading.
 * _Swamplandia_, Karen Russell
 * _Song of Solomon_, Toni Morrison
 * _Tender is the Night_, F. Scott Fitzgerald
-* The Liars Club, Mary Karr
+* _The Liars Club_, Mary Karr
 * _The Joy Luck Club_, Amy Tan
 * _ We Have Always Lived in the Castle_, Shirley Jackson
 * _Jabercrow_, Wendell Berry
